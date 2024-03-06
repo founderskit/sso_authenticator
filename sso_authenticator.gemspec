@@ -7,9 +7,8 @@ Gem::Specification.new do |spec|
   spec.version = SsoAuthenticator::VERSION
   spec.authors = ["adham90"]
   spec.email = ["hi@adham.dev"]
-
-  spec.summary = "SSO auth"
-  spec.description = "auth"
+  spec.summary = "FoundersKit SSO Authenticator"
+  spec.description = "SSO Authenticator for FoundersKit"
   spec.homepage = "https://github.com/founderskit/sso_authenticator"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
