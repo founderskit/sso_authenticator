@@ -6,7 +6,7 @@ module SsoAuthenticator
     def self.exchange!(code)
       puts "Debug: Session Store URI is #{SsoAuthenticator.configuration.inspect}"
 
-      uri = URI(SsoAuthenticator.configuration.sso_service_url)
+      uri = URI(SsoAuthenticator.configuration.sso_service_url + "/sso")
       response = Net::HTTP.post_form(uri, code: code, client_id: SsoAuthenticator.configuration.client_id, client_secret: SsoAuthenticator.configuration.client_secret)
       response_body = JSON.parse(response.body).symbolize_keys
       token = response_body[:token]
