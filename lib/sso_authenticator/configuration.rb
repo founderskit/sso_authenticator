@@ -6,7 +6,6 @@ module SsoAuthenticator
   def self.configure
     self.configuration ||= Configuration.new
     yield(configuration)
-    configuration.validate_variables
   end
 
   class Configuration
@@ -18,12 +17,6 @@ module SsoAuthenticator
       @session_store_uri = ''
       @sso_service_url = ''
       @cookie_salt = ''
-    end
-
-    def validate_variables
-      %i[client_id client_secret session_store_uri sso_service_url cookie_salt].each do |variable|
-        raise "Error: #{variable} is not set" if send(variable).empty?
-      end
     end
   end
 end
