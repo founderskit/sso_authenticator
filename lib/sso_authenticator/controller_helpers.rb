@@ -9,7 +9,7 @@ module SsoAuthenticator
 
       sso_service_url = SsoAuthenticator.configuration.sso_service_url
       client_id = SsoAuthenticator.configuration.client_id
-      redirect_to "#{sso_service_url}/sso/#{client_id}"
+      redirect_to "#{sso_service_url}/sso/#{client_id}", allow_other_host: true
     end
   end
 end
