@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sso_authenticator (0.1.0)
+    sso_authenticator (0.1.1)
       httparty
       rails (>= 6.0)
       redis
